@@ -1,6 +1,6 @@
 <template>
-
-  <div class="flex flex-col justify-center space-y-5 items-center mt-32">
+  <p class="text-2xl my-10 text-center">V3TCloud</p>
+  <div class="flex flex-col justify-center space-y-5 items-center mt-8">
     <div class="w-3/4 relative">
       <input
         v-model="number"
