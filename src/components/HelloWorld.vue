@@ -27,11 +27,21 @@
 </template>
 
 <script setup>
-import { defineProps, reactive } from 'vue'
+import { defineProps, reactive, onMounted } from 'vue'
 import { Button } from 'vant';
+import { db } from '@/clousbase'
 
 defineProps({
   msg: String
+})
+
+onMounted(() => {
+  setTimeout(() => {
+    db.collection('user').get().then(res => {
+      console.log(res);
+    })
+  }, 1000);
+
 })
 
 const state = reactive({ count: 0 })
