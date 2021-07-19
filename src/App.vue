@@ -1,12 +1,13 @@
 <template>
-  <HelloWorld
+  <!-- <HelloWorld
     v-if="!inLogin"
     @change="checkLogin"
   />
   <Home
     v-else
     @change="checkLogin"
-  />
+  /> -->
+  <Modals />
 </template>
 
 <script setup>
@@ -14,6 +15,7 @@ import { auth } from '@/clousbase'
 import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import Home from './components/Home.vue'
+import Modals from './components/Modals.vue'
 
 let inLogin = ref(auth.hasLoginState())
 
